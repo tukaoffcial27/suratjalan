@@ -31,7 +31,7 @@ filesToCopy.forEach(file => {
 
 // 2. Buat Halaman Kota & Sitemap
 let sitemapEntries = '';
-const baseUrl = 'https://suratjalanpro.netlify.app';
+const baseUrl = 'https://suratjalan.guidify.app';
 
 cities.forEach((data) => {
     let content = template.replace(/{{city}}/g, data.city);

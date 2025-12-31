@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://suratjalanpro.netlify.app/sitemap.xml
+# Pastikan URL di bawah ini menggunakan domain baru
+Sitemap: https://suratjalan.guidify.app/sitemap.xml
