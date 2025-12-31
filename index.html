@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <title>Surat Jalan Digital Pro — Luxury Edition</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aplikasi pembuat Surat Jalan Digital (Delivery Order) dengan fitur Tanda Tangan Digital di layar, Auto-Save, dan Layout A4 Luxury.">
+
+  <meta name="google-site-verification" content="njIkUDWT97ucMoKWITvNsIlrf_hy8i9DmwQhoPbelQw" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#1e293b',      /* Luxury Navy (Warna Dominan) */
+            gold: '#b49b67',      /* Antique Gold (Warna Aksen) */
+            'gold-light': '#d4bc8b',
+            paper: '#fbfaf8',     /* Warna Background Mewah */
+            danger: '#dc2626'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif']
+          },
+          animation: {
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-paper text-navy font-sans">
+
+<div id="sticky-timer" class="fixed top-0 left-0 w-full bg-navy text-white text-center py-2 z-50 shadow-md hidden border-b border-gold">
+  <p class="text-sm md:text-base font-medium">
+    🚛 PROMO LOGISTIK PREMIUM BERAKHIR: 
+    <span id="timer-display" class="bg-gold text-navy px-2 py-0.5 rounded ml-2 font-mono text-lg font-bold">02:00:00</span>
+  </p>
+</div>
+
+<div class="h-10"></div>
+
+<section class="bg-navy text-white py-20 px-6 relative overflow-hidden">
+  <div class="absolute top-0 left-0 w-full h-full opacity-5 bg-[url('https://www.transparenttextures.com/patterns/black-scales.png')]"></div>
+
+  <div class="max-w-4xl mx-auto text-center relative z-10">
+    <div class="inline-block bg-white/5 border border-gold text-gold px-6 py-1 rounded-full text-xs font-bold mb-8 tracking-[0.2em] uppercase shadow-lg backdrop-blur-md">
+      ✦ The Standard of Delivery
+    </div>
+    
+    <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6 font-serif">
+      Kirim Barang dengan Wibawa <br>
+      <span class="text-gold">Surat Jalan Digital</span>
+    </h1>
+
+    <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+      Tinggalkan kertas karbon yang kusam. Beralih ke sistem <strong>Delivery Order Digital</strong> dengan fitur <strong>Tanda Tangan Layar Sentuh</strong>. Tanpa scan, tanpa ribet.
+    </p>
+
+    <div class="mb-10 p-6 bg-white/5 rounded-sm inline-block backdrop-blur-sm border border-gold/30 shadow-2xl relative">
+      <div class="absolute -top-3 -right-3 bg-gold text-navy text-[10px] font-bold px-2 py-1">LIFETIME ACCESS</div>
+      <p class="text-xs text-gray-400 mb-2 uppercase tracking-widest font-bold">Harga Peluncuran</p>
+      <div class="flex items-center justify-center gap-5">
+        <span class="line-through text-gray-500 text-xl decoration-gold/50 font-serif">Rp 145.000</span>
+        <span class="text-gold text-5xl font-serif font-bold">Rp 75.000</span>
+      </div>
+    </div>
+
+    <div class="flex flex-col md:flex-row gap-5 justify-center">
+      <a href="#checkout" class="bg-gold text-navy px-8 py-4 rounded-sm font-bold text-xl hover:bg-yellow-600 transition transform hover:-translate-y-1 flex items-center justify-center gap-3 shadow-lg shadow-gold/20 uppercase tracking-wider">
+        <span>📦</span> Ambil Promo
+      </a>
+      <a href="#demo" class="border border-gray-600 text-gray-300 px-8 py-4 rounded-sm font-bold text-xl hover:bg-white/5 transition uppercase tracking-wider">
+        Lihat Preview
+      </a>
+    </div>
+
+    <p class="text-xs text-gray-500 mt-8 flex justify-center gap-6 font-serif tracking-wider">
+      <span>[ DIGITAL SIGNATURE ]</span>
+      <span>[ AUTO-SAVE DATA ]</span>
+      <span>[ LUXURY A4 ]</span>
+    </p>
+  </div>
+</section>
+
+<section class="bg-white border-b border-gray-200 py-12 shadow-sm relative z-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-10 text-center divide-x divide-gray-100">
+      
+      <div class="flex flex-col items-center">
+        <span class="text-4xl font-extrabold text-navy mb-1 font-serif">25k+</span>
+        <span class="text-xs text-gray-500 font-bold uppercase tracking-wide">Pengiriman Sukses</span>
+      </div>
+
+      <div class="flex flex-col items-center">
+        <span class="text-4xl font-extrabold text-gold mb-1 font-serif">3x</span>
+        <span class="text-xs text-gray-500 font-bold uppercase tracking-wide">Lebih Cepat</span>
+      </div>
+
+      <div class="flex flex-col items-center">
+        <span class="text-4xl font-extrabold text-navy mb-1 font-serif">100%</span>
+        <span class="text-xs text-gray-500 font-bold uppercase tracking-wide">Paperless Ready</span>
+      </div>
+
+      <div class="flex flex-col items-center">
+        <span class="text-4xl font-extrabold text-gold mb-1 font-serif">4.9/5</span>
+        <span class="text-xs text-gray-500 font-bold uppercase tracking-wide">Kepuasan User</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="demo" class="py-20 px-6 bg-paper">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-4 text-navy font-serif">Teknologi dalam Genggaman</h2>
+    <p class="text-gray-600 mb-12 max-w-2xl mx-auto">
+      Sistem yang didesain untuk kemudahan Admin Gudang, Supir, dan Penerima Barang.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-8 items-start">
+      <div class="group relative rounded shadow-xl border border-gray-200 bg-white overflow-hidden">
+        <div class="absolute top-0 left-0 bg-navy text-gold text-xs px-3 py-1 font-bold z-10 uppercase tracking-wider">Input Barang</div>
+        <img src="preview-suratjalan.jpg" alt="Editor Surat Jalan" class="w-full h-auto transform group-hover:scale-102 transition duration-700">
+      </div>
+      
+      <div class="group relative rounded shadow-xl border border-gold bg-white overflow-hidden ring-4 ring-gold/20">
+        <div class="absolute top-0 left-0 bg-gold text-navy text-xs px-3 py-1 font-bold z-10 uppercase tracking-wider">Fitur Unggulan</div>
+        <div class="absolute bottom-0 w-full bg-navy/90 text-white text-xs py-2">Tanda Tangan Digital (Touchscreen)</div>
+        <img src="preview-suratjalan1.jpg" alt="Fitur Tanda Tangan" class="w-full h-auto transform group-hover:scale-102 transition duration-700">
+      </div>
+
+      <div class="group relative rounded shadow-xl border border-gray-200 bg-white overflow-hidden">
+        <div class="absolute top-0 left-0 bg-navy text-gold text-xs px-3 py-1 font-bold z-10 uppercase tracking-wider">Hasil PDF (A4)</div>
+        <img src="preview-suratjalan2.jpg" alt="Hasil Cetak PDF" class="w-full h-auto transform group-hover:scale-102 transition duration-700">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 px-6 bg-white">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-16 text-navy font-serif">
+      Standar Baru <span class="text-gold">Logistik Modern</span>
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div class="space-y-8">
+        
+        <div class="flex gap-5">
+          <div class="bg-navy p-3 rounded-sm h-fit text-gold shadow-lg">
+            <i class="fa-solid fa-pen-nib text-2xl"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-xl mb-1 text-navy font-serif">On-Screen Signature</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Tidak perlu print lalu scan. Supir dan penerima bisa tanda tangan langsung menggunakan jari di layar HP/Tablet. Sah dan Profesional.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-5">
+          <div class="bg-navy p-3 rounded-sm h-fit text-gold shadow-lg">
+            <i class="fa-solid fa-floppy-disk text-2xl"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-xl mb-1 text-navy font-serif">Auto-Save Identity</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Data perusahaan dan info gudang terkunci otomatis di memori browser. Tidak perlu mengetik ulang setiap kali membuat surat jalan baru.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-5">
+          <div class="bg-navy p-3 rounded-sm h-fit text-gold shadow-lg">
+            <i class="fa-solid fa-file-contract text-2xl"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-xl mb-1 text-navy font-serif">Layout A4 Luxury</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Desain dokumen A4 yang rapi dengan aksen emas dan layout profesional. Mencerminkan kredibilitas perusahaan Anda.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-navy p-8 rounded shadow-2xl border border-gray-700 text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-gold rounded-full blur-3xl opacity-10"></div>
+        
+        <h4 class="font-bold mb-6 text-center text-gold font-serif border-b border-gray-700 pb-4 tracking-widest">SURAT JALAN MANUAL vs LUXURY EDITION</h4>
+        <div class="space-y-5 text-sm">
+          <div class="flex justify-between items-center border-b border-gray-700 pb-2">
+            <span class="text-gray-400">Tanda Tangan</span>
+            <span class="text-red-400 font-bold">❌ Kertas Basah/Hilang</span>
+          </div>
+           <div class="flex justify-between items-center border-b border-gray-700 pb-2">
+            <span class="text-gray-400">Tulisan Tangan</span>
+            <span class="text-red-400 font-bold">❌ Sulit Dibaca</span>
+          </div>
+           <div class="flex justify-between items-center border-b border-gray-700 pb-2">
+            <span class="text-gray-400">Kesan Klien</span>
+            <span class="text-red-400 font-bold">❌ Toko Biasa</span>
+          </div>
+          <div class="bg-gold p-5 rounded-sm text-center mt-6 text-navy">
+            <p class="font-serif font-bold mb-1 uppercase tracking-widest">Surat Jalan Luxury</p>
+            <p class="text-lg font-bold">✅ BONAFIT, RAPI, AMAN</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 px-6 bg-paper">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-12 text-navy font-serif">Alur Kerja Efisien</h2>
+    
+    <div class="grid md:grid-cols-4 gap-8 text-left">
+      <div class="relative pl-8 border-l border-gold">
+        <div class="absolute -left-3 top-0 bg-navy text-gold w-6 h-6 rounded-full text-center font-bold text-sm leading-6 border border-gold">1</div>
+        <h4 class="font-bold text-lg mb-2 text-navy font-serif">Buka App</h4>
+        <p class="text-sm text-gray-600">Akses file HTML langsung dari browser Laptop atau Tablet Anda.</p>
+      </div>
+      <div class="relative pl-8 border-l border-gold">
+        <div class="absolute -left-3 top-0 bg-navy text-gold w-6 h-6 rounded-full text-center font-bold text-sm leading-6 border border-gold">2</div>
+        <h4 class="font-bold text-lg mb-2 text-navy font-serif">Isi Barang</h4>
+        <p class="text-sm text-gray-600">Masukkan detail barang. Klik "+ Tambah Item" untuk menambah baris tanpa batas.</p>
+      </div>
+      <div class="relative pl-8 border-l border-gold">
+        <div class="absolute -left-3 top-0 bg-navy text-gold w-6 h-6 rounded-full text-center font-bold text-sm leading-6 border border-gold">3</div>
+        <h4 class="font-bold text-lg mb-2 text-navy font-serif">Tanda Tangan</h4>
+        <p class="text-sm text-gray-600">Minta Supir dan Penerima tanda tangan langsung di layar perangkat.</p>
+      </div>
+      <div class="relative pl-8 border-l border-gold">
+        <div class="absolute -left-3 top-0 bg-navy text-gold w-6 h-6 rounded-full text-center font-bold text-sm leading-6 border border-gold">4</div>
+        <h4 class="font-bold text-lg mb-2 text-navy font-serif">Cetak/PDF</h4>
+        <p class="text-sm text-gray-600">Simpan sebagai PDF (A4) dengan background aktif untuk dikirim via WA.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="checkout" class="py-24 px-6 bg-navy text-white text-center relative overflow-hidden">
+   <div class="absolute top-0 right-0 w-80 h-80 bg-gold rounded-full mix-blend-overlay filter blur-3xl opacity-20 animate-pulse-slow"></div>
+   <div class="absolute bottom-0 left-0 w-80 h-80 bg-blue-900 rounded-full mix-blend-overlay filter blur-3xl opacity-10 animate-pulse-slow"></div>
+
+  <div class="max-w-4xl mx-auto relative z-10">
+    <h2 class="text-3xl md:text-5xl font-bold mb-6 font-serif">Solusi Premium, Harga Minimum</h2>
+    <p class="text-gray-400 mb-10 text-lg">
+      Miliki sistem surat jalan canggih tanpa biaya langganan bulanan software ERP.<br>
+      Investasi cerdas untuk operasional gudang Anda.
+    </p>
+
+    <div class="bg-white/5 backdrop-blur-md p-10 rounded-sm shadow-2xl max-w-lg mx-auto border border-gold/40 mb-10 relative group hover:border-gold/80 transition-colors">
+      <div class="absolute -top-4 right-4 bg-gold text-navy px-6 py-1 rounded-sm text-sm font-bold shadow-lg uppercase tracking-wide">
+        Diskon 50%
+      </div>
+
+      <div class="flex justify-between items-end mb-4 border-b border-gray-600 pb-4">
+        <span class="text-gray-400 font-serif">Harga Software</span>
+        <span class="line-through text-gray-500 font-serif">Rp 145.000</span>
+      </div>
+      <div class="flex justify-between items-end mb-8">
+        <span class="text-gold font-bold text-xl animate-pulse uppercase tracking-widest">HARGA PROMO</span>
+        <span class="text-6xl font-bold text-white font-serif">Rp 75rb</span>
+      </div>
+      
+      <a href="http://lynk.id/tukastore/zwl8kgq3y0k2/checkout" class="block w-full bg-gradient-to-r from-gold to-yellow-700 text-white font-bold text-xl py-5 rounded-sm hover:shadow-[0_0_30px_rgba(180,155,103,0.4)] transition transform hover:scale-105 uppercase tracking-wide border border-gold/50">
+        DOWNLOAD SEKARANG ➔
+      </a>
+      <p class="text-xs text-gray-400 mt-4">Sekali bayar. Pakai selamanya tanpa limit.</p>
+    </div>
+
+    <div class="text-sm text-gray-400 space-x-6 flex justify-center items-center font-serif">
+      <span class="flex items-center gap-2"><span class="text-gold">★</span> 5/5 Quality</span>
+      <span>•</span>
+      <span>Garansi Fitur Berjalan 100%</span>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-black text-gray-500 py-10 text-center text-sm border-t border-gray-900">
+  <p class="font-serif text-gray-400">© 2025 Surat Jalan Luxury Edition. All Rights Reserved.</p>
+  <p class="mt-3 text-xs">Produk digital untuk efisiensi logistik.</p>
+</footer>
+
+<script>
+  // === LOGIKA TIMER (KEY UNIK: SURAT JALAN) ===
+  document.addEventListener('DOMContentLoaded', function() {
+    const timerElement = document.getElementById('timer-display');
+    const stickyBar = document.getElementById('sticky-timer');
+    // Key storage dibedakan
+    const STORAGE_KEY = 'suratjalan_promo_endtime'; 
+    const DURATION_HOURS = 2;
+
+    stickyBar.classList.remove('hidden');
+
+    let endTime = localStorage.getItem(STORAGE_KEY);
+
+    if (!endTime) {
+      const now = new Date();
+      now.setHours(now.getHours() + DURATION_HOURS);
+      endTime = now.getTime();
+      localStorage.setItem(STORAGE_KEY, endTime);
+    }
+
+    function updateTimer() {
+      const now = new Date().getTime();
+      const distance = endTime - now;
+
+      if (distance < 0) {
+        timerElement.innerHTML = "00:00:00";
+        return;
+      }
+
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      timerElement.innerHTML = 
+        (hours < 10 ? "0" + hours : hours) + ":" + 
+        (minutes < 10 ? "0" + minutes : minutes) + ":" + 
+        (seconds < 10 ? "0" + seconds : seconds);
+    }
+
+    setInterval(updateTimer, 1000);
+    updateTimer(); 
+  });
+</script>
+
+</body>
+</html>
